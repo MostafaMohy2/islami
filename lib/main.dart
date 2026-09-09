@@ -5,6 +5,7 @@ import 'package:islami/core/models/sura.dart';
 import 'package:islami/screens/home/home_screen.dart';
 import 'package:islami/screens/home/tabs/hadeeth/hadeeth_screen.dart';
 import 'package:islami/screens/home/tabs/quran/sura_screen.dart';
+import 'package:islami/screens/onboarding/screens/on_boarding_screen.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -40,10 +41,12 @@ class _MyAppState extends State<MyApp> {
         HadeethScreen.route :(context) {
           var hadeeth = ModalRoute.of(context)!.settings.arguments as Hadeeth;
           return HadeethScreen(hadeeth: hadeeth);
-        }
+        },
+
+        OnBoardingScreen.route:(_) => OnBoardingScreen()
         
       },
-      initialRoute: HomeScreen.route,
+      initialRoute: OnBoardingScreen.route,
     );
   }
 }

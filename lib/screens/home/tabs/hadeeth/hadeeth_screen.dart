@@ -18,6 +18,7 @@ class _HadeethScreenState extends State<HadeethScreen> {
     return Scaffold(
       backgroundColor: AppColors.black,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: AppColors.gold),
         backgroundColor: AppColors.black,
         title: Text(widget.hadeeth.title, style: titleLarge(),),

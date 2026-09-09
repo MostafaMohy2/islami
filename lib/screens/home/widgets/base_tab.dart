@@ -30,7 +30,7 @@ class BaseTab extends StatelessWidget {
             SafeArea(
               child: Center(
                 child: Image.asset(
-                  'assets/images/Logo.png',
+                  'assets/images/logo.png',
                   width: MediaQuery.of(context).size.width * 0.5,
                 ),
               ),
