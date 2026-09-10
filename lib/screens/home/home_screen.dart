@@ -4,6 +4,8 @@ import 'package:islami/screens/home/tabs/hadeeth/hadeeth_tab.dart';
 import 'package:islami/screens/home/tabs/quran/quran_tab.dart';
 import 'package:islami/screens/home/widgets/base_tab.dart';
 
+import 'tabs/sebha/sebha_tab.dart';
+
 class HomeScreen extends StatefulWidget {
   static const String route = '/home';
   const HomeScreen({super.key});
@@ -26,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
     BaseTab(
       imgPath: 'assets/images/sebha_bg.png',
-      child: Container(color: Colors.yellow),
+      child: SebhaTab(),
     ),
     BaseTab(
       imgPath: 'assets/images/radio_bg.png',
