@@ -54,6 +54,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               },
             ),
           ),
+          
           ActionButtons(
             controller: controller,
             onBackClicked: () {
@@ -71,6 +72,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             onFinishClicked: () {
               Navigator.pushReplacementNamed(context, HomeScreen.route);
             },
+            isFirst: currentPage == 0,
             isLast: currentPage == OnBoarding.onBoardingList.length - 1,
           ),
         ],

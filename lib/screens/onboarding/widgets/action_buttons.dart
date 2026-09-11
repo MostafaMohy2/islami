@@ -12,6 +12,7 @@ class ActionButtons extends StatefulWidget {
     required this.onBackClicked,
     required this.onNextClicked,
     required this.onFinishClicked,
+    required this.isFirst,
     required this.isLast,
   });
 
@@ -19,6 +20,7 @@ class ActionButtons extends StatefulWidget {
   final void Function()? onNextClicked;
   final void Function()? onBackClicked;
   final void Function()? onFinishClicked;
+  final bool isFirst;
   final bool isLast;
 
   @override
@@ -30,9 +32,15 @@ class _ActionButtonsState extends State<ActionButtons> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        TextButton(
-          onPressed: widget.onBackClicked,
-          child: Text('Back', style: titleMedium()),
+        Visibility(
+          visible: !widget.isFirst,
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
+          child: TextButton(
+            onPressed: widget.onBackClicked,
+            child: Text('Back', style: titleMedium()),
+          ),
         ),
         Expanded(
           child: Center(
@@ -51,7 +59,7 @@ class _ActionButtonsState extends State<ActionButtons> {
         widget.isLast
             ? TextButton(
                 onPressed: widget.onFinishClicked,
-                child: Text('Finished', style: titleMedium()),
+                child: Text('Finish', style: titleMedium()),
               )
             : TextButton(
                 onPressed: widget.onNextClicked,
