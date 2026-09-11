@@ -60,7 +60,7 @@ class _HadeethScreenState extends State<HadeethScreen> {
                 vertical: 4,
               ),
               children: [
-                Text(widget.hadeeth.content, style: titleMedium(),)
+                Text(widget.hadeeth.content, style: titleMedium(), textAlign: .center,)
               ],
             ),
           ),
