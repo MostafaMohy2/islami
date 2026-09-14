@@ -52,7 +52,7 @@ assets/
 
 ## Demo Video
 
-
+https://github.com/user-attachments/assets/aa2045f6-a949-44ed-ac6c-faf9a49d07d9
 
 ## License
 
